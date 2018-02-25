@@ -1,22 +1,23 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-3 left-chat">
-      	<ul>
-						<li *ngFor="let i of room">
-							<div class="chat-left-img">
-								<img src="assets/Kolyan.png">
-							</div>
-							<div class="chat-left-detail">
-								<p>{{i.name}}</p>
-                <span *ngIf="!i.typing; else typing"><i class="fa fa-circle" aria-hidden="true"></i> online</span>
-                <ng-template #typing><span><i class="fa fa-circle" aria-hidden="true"></i> is typing...</span></ng-template>
-							</div>
-						</li>  
-					</ul>
+      <ul>
+        <li *ngFor="let i of room">
+          <div class="chat-left-img">
+            <img src="assets/Kolyan.png">
+          </div>
+          <div class="chat-left-detail">
+            <p>{{i.name}}</p>
+            <span *ngIf="!i.typing; else typing"><i class="fa fa-circle" aria-hidden="true"></i> online</span>
+            <ng-template #typing><span><i class="fa fa-circle" aria-hidden="true"></i> is typing...</span></ng-template>
+          </div>
+        </li>
+      </ul>
     </div>
     <div class="col-sm-9">
 
-      <input type="text" id="message" *ngIf="user; else name_input" placeholder="Chat here..." (keyup.enter)="chatSend(msgVal)" (ngModelChange)="isTyping($event)" [(ngModel)]="msgVal" />
+      <input type="text" id="message" *ngIf="user; else name_input" placeholder="Chat here..." (keyup.enter)="chatSend(msgVal)"
+        (ngModelChange)="isTyping($event)" [(ngModel)]="msgVal" />
       <ng-template #name_input>
         <input type="text" id="message" placeholder="Enter Your Name..." (keyup.enter)="setUser(nameVal)" [(ngModel)]="nameVal" />
       </ng-template>

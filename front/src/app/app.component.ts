@@ -1,9 +1,6 @@
 import { NgModule, Component, HostListener } from '@angular/core';
-import { Router } from "@angular/router";
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Response } from '@angular/http';
-import { Injectable } from '@angular/core';
-declare var $: any;
 import * as io from 'socket.io-client';
 import { SimpleNotificationsComponent } from 'angular2-notifications';
 import { NotificationsService } from 'angular2-notifications';
@@ -21,7 +18,6 @@ export class AppComponent {
   items;
   user: any;
   name: any;
-  authState;
   msgVal;
   room;
   api_url = 'http://localhost:3000';
