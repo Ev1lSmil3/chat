@@ -1,4 +1,3 @@
-var express = require('express');
 var mongoClient = require("mongodb").MongoClient;
 
 var app = require('express')();
