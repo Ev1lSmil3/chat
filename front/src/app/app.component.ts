@@ -42,7 +42,7 @@ export class AppComponent {
       this.items.unshift(data);
     });
     this.socket.on('user entered chat', (data) => {
-      self.user == data.name ? self._service.success('You', 'entered chat', { timeOut: 5000, showProgressBar: false }) : self._service.success(data.name, 'entered chat', { timeOut: 5000, showProgressBar: false });
+      self.user == data.name ? self._service.success('You', 'entered the chat', { timeOut: 5000, showProgressBar: false }) : self._service.success(data.name, 'entered the chat', { timeOut: 5000, showProgressBar: false });
       self.room.push(data);
     });
     this.socket.on('invalid value', (data) => {
@@ -50,7 +50,7 @@ export class AppComponent {
     });
     this.socket.on('disconnect', function (user) {
       self.room.splice(self.room.indexOf(self.room.find((el) => el.name == user)), 1);
-      self.user ? self._service.error(user, 'ran like a Pussy!', { timeOut: 5000, showProgressBar: false }) : null;
+      self.user ? self._service.error(user, 'has left the chat', { timeOut: 5000, showProgressBar: false }) : null;
     });
     this.socket.on('user typing', (user) => {
       self.room.find((el) => el.name == user);
