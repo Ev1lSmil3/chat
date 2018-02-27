@@ -4,7 +4,7 @@ You need to have Angular CLI, Nodejs, TypeScript preinstalled on your computer.
 
 Database
 =========
-First, you should download and install MongoDB.
+First, you should download, install and run MongoDB.
 download link: https://www.mongodb.com/download-center#community
 manual link: https://docs.mongodb.com/manual/installation/
 
