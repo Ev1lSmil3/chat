@@ -20,5 +20,5 @@ Front
 =========
 
 install packages with 'npm i', 
-run front server with 'ng serve'
+run front server with 'ng serve'.
 If you did all properly you can use chat application on url http://localhost:4200
